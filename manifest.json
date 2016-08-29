@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+  "name": "Reins Crawler",
+  "version": "0.6.0",
+  "description": "Crawling Mansion Information in Reins",
+  "page_action":
+  {
+    "default_title": "Reins Crawler",
+    "default_popup": "popup.html",
+    "default_icon":  "icon48.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://system.reins.jp/*"
+      ],
+      "js": ["jquery-2.1.3.js", "content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "background": {
+    "persistent": true,
+    "scripts": ["jquery-2.1.3.js", "background.js"]
+  },
+  "permissions": [
+    "tabs", "https://system.reins.jp/*",
+    "storage",
+    "alarms",
+    "downloads"
+  ]
+}

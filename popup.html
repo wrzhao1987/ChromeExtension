@@ -1,0 +1,33 @@
+<html>
+<head>
+  <title>Crawler</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=Shift_JIS" />
+  <script src="jquery-2.1.3.js"></script>
+  <script src="background.js"></script>
+</head>
+
+<body>
+<div id="content">
+  <!--<label for="crawlPeriod">クローリング間隔:</label><input type="text" id="crawlPeriod" name="crawlPeriod" />-->
+  <select id="typeButton">
+    <option value="1">売買・成約</option>
+    <option value="2">売買・在庫</option>
+    <option value="3">賃貸・成約</option>
+    <option value="4">賃貸・在庫</option>
+  </select>
+  <br />
+  <br />
+  <input id="startRow" type="text" />
+  <label for="startRow">行目から</label>
+  <br />
+  <input id="startButton" type="button" value="開始" />
+  <br />
+  <input id="pauseButton" type="button" value="停止" />
+  <br />
+  <input id="exportButton" type="button" value="出力" />
+  <br />
+  <input id="clearButton" type="button" value="キャッシュクリア" />
+  <br />
+</div>
+
+</body>
